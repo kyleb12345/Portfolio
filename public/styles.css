@@ -1,0 +1,373 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html {
+    
+
+    --gradient: linear-gradient(
+        20deg,
+        #845ec2,
+        #d65db1,
+        #ff6f91,
+        #87ceeb,
+        #ff9871,
+        #ffc75f,
+        #f9f871,
+        #ff9871
+    );
+
+    --colors: linear-gradient(
+        20deg, 
+        #f9f871,
+        #ffc75f,
+        #ff9871,
+        #ffc75f,
+        #f9f871
+        
+    );
+
+    --colordown: linear-gradient(
+        190deg,
+        #845ec2,
+        #d65db1,
+        #ff6f91,
+        #87ceeb,
+        #ff9871,
+        #ffc75f,
+        #f9f871
+    );
+
+    --colorstwo: linear-gradient( 
+        180deg,
+        rgba(135, 206, 235, 0.5),
+        rgba(135, 206, 235),
+        #ffc75f,
+        #f9f871,
+        rgba(255, 152, 113),
+        #ff9871
+    );
+
+    --colorsthree: linear-gradient( 
+        0deg,
+        rgba(135, 206, 235, 0.5),
+        rgba(135, 206, 235),
+        #ffc75f,
+        #f9f871,
+        rgba(255, 152, 113),
+        #ff9871
+    );
+
+        --colorsfour: linear-gradient(
+            350deg,
+            #d65db1,
+            #d65db1,
+            rgb(255, 255, 255),
+            #d65db1,
+            #d65db1
+        
+    );
+
+    --colorsfive: linear-gradient(
+            340deg,
+            #d65db1,
+            #d65db1,
+            rgb(255, 255, 255),
+            #d65db1,
+            #d65db1
+        
+    );
+
+    background-image: var(--colorstwo);
+    background-size: 200%;
+    animation: bg-animation 30s infinite alternate;
+}
+
+@keyframes bg-animation {
+    0% {background-position: left}
+    100% {background-position: right;}
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+
+#scrollPath {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0.781rem;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+#progressBar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0.781rem;
+    background: linear-gradient(to top, #87ceeb, #d65db1);
+    animation: scrollAnimate 10s linear infinite;
+}
+
+@keyframes scrollAnimate {
+    0%, 100%
+    {
+        filter: hue-rotate(0deg);
+    }
+    50%
+    {
+        filter:hue-rotate(100deg);
+    }
+}
+
+#progressBar:before {
+    content:'';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #87ceeb, #d65db1);
+    filter: blur(10px);
+}
+
+#progressBar:after {
+    content:'';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #87ceeb, #d65db1);
+    filter: blur(30px);
+}
+
+header{
+position: relative;
+overflow: hidden;
+}
+
+.container {
+    height: 115vh;
+    
+}
+
+.container img {
+    width: 101%;
+    position: absolute;
+    height: 115vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.big-title {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    font-size: 6rem;
+    transform: translate(-50%, -30%);
+    color: white;
+}  
+
+
+
+.layer2 {
+    bottom: -0.063rem;
+}
+
+.layer3 {
+    bottom: -0.188rem;
+}
+
+.layer4 {
+    bottom: -0.313rem;
+}
+
+.cloud {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(cloud3.png);
+    animation: animate 60s linear infinite;
+}
+
+@keyframes animate 
+{
+    0%
+{
+    background-position: 0px;
+}
+100%
+{
+background-position: 128.063rem;
+}
+}
+
+
+.content {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+    background-image: var(--colors);
+    background-size: 200%;
+    animation: bg-animation 30s infinite alternate;
+}
+
+@keyframes bg-animation {
+    0% {background-position: left}
+    100% {background-position: right;}
+}
+
+
+ #space-between {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 3.125rem;
+    
+}
+
+#space-between h1 {
+    font-size: 4rem;
+    font-weight: 548;
+    letter-spacing: 0.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    filter:brightness(110%);
+    text-shadow: 
+    0 0 5px #87ceeb,
+    0 0 10px #87ceeb,
+    0 0 15px #87ceeb,
+    0 0 20px #87ceeb,
+    0 0 60px #87ceeb,
+    0 0 80px #87ceeb,
+    0 0 100px #87ceeb,
+    0 0 120px #87ceeb
+}
+
+#space-between h1:hover {
+    font-size: 4rem;
+    font-weight: 548;
+    letter-spacing: 0.5rem;
+    cursor: default;
+    color: rgba(255, 255, 255, 1);
+    filter:brightness(120%);
+    text-shadow: 
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 15px #d65db1,
+    0 0 20px #d65db1,
+    0 0 60px #d65db1,
+    0 0 80px #d65db1,
+    0 0 100px #fff,
+    0 0 120px #fff
+}
+
+#game-btn {
+    position: absolute;
+    right: 1.5rem;
+    bottom: .5rem;
+    font-size: 1rem;
+   padding:10px;
+   overflow: hidden;
+   border-radius: 1.875rem;
+   background-image: var(--colorsfour);
+   background-size: 200%;
+   animation: bg-animation 30s infinite alternate;
+}
+
+@keyframes bg-animation {
+   0% {background-position: left}
+   100% {background-position: right;}
+}
+
+#game-btn:hover {
+    transform: scale(1.1);
+}
+
+#game-btn a {
+    text-decoration: none;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 
+    0 0 2px #d65db1,
+    0 0 3px #d65db1,
+    0 0 4px #d65db1,
+    0 0 5px #d65db1,
+    0 0 6px #d65db1,
+    0 0 10px #d65db1,
+    0 0 15px #d65db1,
+    0 0 20px #d65db1,
+    0 0 60px #d65db1,
+    0 0 80px #d65db1,
+    0 0 100px #d65db1,
+    0 0 120px #d65db1
+}
+
+#game-btn a:hover {
+    cursor:pointer;
+    filter:brightness(120%);
+}
+
+#skills-btn {
+    position: absolute;
+    left: 1rem;
+    bottom: .5rem;
+    font-size: 1rem;
+   padding:10px;
+   overflow: hidden;
+   border-radius: 1.875rem;
+   background-image: var(--colorsfive);
+   background-size: 200%;
+   animation: bg-animation 30s infinite alternate;
+}
+
+@keyframes bg-animation {
+   0% {background-position: left}
+   100% {background-position: right;}
+}
+
+#skills-btn:hover {
+    transform: scale(1.1);
+}
+
+#skills-btn a {
+    text-decoration: none;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 
+    0 0 2px #d65db1,
+    0 0 3px #d65db1,
+    0 0 4px #d65db1,
+    0 0 5px #d65db1,
+    0 0 6px #d65db1,
+    0 0 10px #d65db1,
+    0 0 15px #d65db1,
+    0 0 20px #d65db1,
+    0 0 60px #d65db1,
+    0 0 80px #d65db1,
+    0 0 100px #d65db1,
+    0 0 120px #d65db1
+}
+
+
+#skills-btn a:hover {
+    cursor:pointer;
+    filter:brightness(120%);
+}
+
+
+
+
+
+
+

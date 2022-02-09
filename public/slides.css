@@ -1,0 +1,334 @@
+
+
+#project-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/*all panel content */
+
+.panel {
+    position: relative;
+    height: 25vh;
+    max-width: 10rem;
+    border-radius: 1.25rem;
+    flex: 1;
+    margin: 1%;
+    transition: flex 1s ease-in;
+    cursor: pointer;
+    background-image: var(--gradient);
+    background-size: 200%;
+    animation: bg-animation 20s infinite alternate;
+}
+
+@keyframes bg-animation {
+    0% {background-position: left}
+    100% {background-position: right;}
+}
+
+.panel:hover {
+    transform: scale(1.1);
+    
+}
+
+
+.panel.active {
+    position: relative;
+    flex: 1;
+    max-width: 12rem;
+    height: 65vh;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 25px 25px (0,0,0,0.1);
+    border-radius: 1.875rem;
+    margin-right: 5%;
+    margin-left: 5%;
+    cursor: default;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1);
+    display: grid;
+    border: none;
+    background-image: var(--colordown);
+    background-size: 400%;
+    animation: bg-animation 20s infinite alternate;
+}
+
+@keyframes bg-animation {
+    0% {background-position: left}
+    100% {background-position: right;}
+}
+
+/* glass overlay and direction of it */
+
+.panel .glass-one {
+    position: relative;
+    height: 25vh;
+    max-width: 10rem;
+    border-radius: 1.25rem;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 25px 25px (0,0,0,0.1);
+    left: -1.25rem;
+    top: -1.563rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: none;
+    transition: .5s;
+}
+
+.panel:hover .glass-one {
+    position: relative;
+    height: 25vh;
+    max-width: 11rem;
+    border-radius: 1.188rem;
+    left:0;
+    top:0;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 25px 25px (0,0,0,0.1);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.panel.active .glass-one{
+    display: none;
+}
+
+.panel .glass-two {
+    position: relative;
+    height: 25vh;
+    max-width: 12rem;
+    border-radius: 1.25rem;
+    
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 25px 25px (0,0,0,0.1);
+    top: -1.563rem;
+    bottom: 0.625rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: .5s;
+}
+
+.panel:hover .glass-two {
+    position: relative;
+    height: 26vh;
+    max-width: 11rem;
+    border-radius: 1.188rem;
+    top:0;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 25px 25px (0,0,0,0.1);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.panel.active .glass-two {
+    display: none;
+}
+
+.panel .glass-three {
+    position: relative;
+    height: 25vh;
+    max-width: 11rem;
+    border-radius: 1.25rem;
+    
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 25px 25px (0,0,0,0.1);
+    right: -1.25rem;
+    left: 1.25rem;
+    top: -1.563rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: none;
+    transition: .5s;
+}
+
+.panel:hover .glass-three {
+    position: relative;
+    height: 25vh;
+    max-width: 11rem;
+    border-radius: 1.188rem;
+    right: 0;
+    left: 0;
+    top: 0;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 25px 25px (0,0,0,0.1);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+
+.panel.active .glass-three {
+    display: none;
+}
+
+/* inside of the panels */
+/* first panel */
+
+.panel #first-container {
+    display: none;
+}
+
+
+.panel.active #first-container {
+    display: flex;
+    border-radius: 1.25rem;
+    
+}
+
+#first-container span {
+    position: absolute;
+    top: 3.125rem;
+    left: -3.125rem;
+    right: -3.125rem;
+    bottom: 3.125rem;
+    z-index:2;
+    color: #fff;
+    border-radius: 1.25rem;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+span:hover {
+    transform: scale(1.1);
+}
+
+
+/* second container */
+
+.panel #second-container {
+    display: none;
+}
+
+.panel.active #second-container {
+    display: grid;
+    border-radius: 1.25rem;
+}
+
+#second-container span {
+    position: absolute;
+    top: 3.125rem;
+    left: -3.125rem;
+    right: -3.125rem;
+    bottom: 3.125rem;
+    z-index:2;
+    border-radius: 1.25rem;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+/* third container */
+
+.panel #third-container {
+    display: none;
+}
+
+.panel.active #third-container {
+    display: grid;
+    border-radius: 1.25rem;
+}
+
+#third-container span {
+    position: absolute;
+    top: 3.125rem;
+    left: -3.125rem;
+    right: -3.125rem;
+    bottom: 3.125rem;
+    z-index:2;
+    border-radius: 1.25rem;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+/* fourth panel */
+
+.panel #fourth-container {
+    display: none;
+}
+
+.panel.active #fourth-container {
+    
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+/* buttons */
+
+
+
+.btn {
+    padding:10px;
+    background: rgba(255, 255, 255, 0.05);
+    
+    border-top: 1px solid rgba(255, 255, 255, 0.01);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 1.875rem;
+    color: #fff;
+    
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.3s;
+    background-image: var(--colors);
+    background-size: 200%;
+    animation: bg-animation 3s infinite alternate;
+}
+
+@keyframes bg-animation {
+    0% {background-position: left}
+    100% {background-position: right;}
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
+.btn a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn a:hover {
+    filter: brightness(300%);
+    text-shadow: 
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 15px #fff
+}
+
