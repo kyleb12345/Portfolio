@@ -366,7 +366,16 @@ background-position: 128.063rem;
 }
 
 
+@-moz-document url-prefix() {
 
+    html {
+        scrollbar-width: none;
+     }
+
+    #skills-btn {
+        font-size: 0.8rem;
+    }
+}
 
 
 
