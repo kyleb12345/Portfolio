@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/public/styles.css">
     <link rel="stylesheet" href="/public/slides.css">
     <link rel="stylesheet" href="public/media.css">
+    <link rel="stylesheet" href="/public/overlay.css">
     <script src="app.js" defer></script>
 </head>
 
@@ -21,7 +22,7 @@
 
     <div class="container">
         
-        <h2 class="big-title" translate data-speed="0.7">Welcome</h2>
+        <h2 class="big-title" data-speed="0.7">Welcome</h2>
         
         <img src="./public/mountainlayer4.png" class="translate layer4" data-speed=".8" alt="" />
         <img src="./public/mountainlayer3.png" class="translate layer3" data-speed=".6" alt="" />
@@ -40,7 +41,7 @@
 
 <div id="project-container">
 
-
+    
     
     <div class="panel"> 
         <div class="glass-one">
@@ -49,11 +50,9 @@
         
     <div id="first-container">
         <span>
-        <h3>photo here</h3>
-        <p>first section</p>
-        <p>more content</p>
-        <div class="btn"><a href="#">Website Link</a></div>
-        <div class="btn"><a href="#">github code</a></div>
+            <h3><img class="pictures" src="https://res.cloudinary.com/dlgtx9os2/image/upload/v1644792678/other%20sites/ezgif.com-gif-maker_fry0jz.gif" alt=""></a></h3>
+        <div class="btn"><a href="http://aqueous-shore-08867.herokuapp.com/products" rel="noopener noreferrer" target="_blank">Website Link</a></div>
+        <div class="btn"><a href="https://github.com/kyleb12345/plantsite" rel="noopener noreferrer" target="_blank">Github Code</a></div>
     </span>
     </div>
     </div>
@@ -65,36 +64,86 @@
     </div>
     <div id="second-container">
         <span>
-        <h3>photo here</h3>
-        <p>first section</p>
-        <p>more content</p>
-        <div class="btn"><a href="#">Website Link</a></div>
-        <div class="btn"><a href="#">github code</a></div>
+            <h3><img class="pictures" src="https://res.cloudinary.com/dlgtx9os2/image/upload/v1644796350/other%20sites/ezgif.com-gif-maker_2_gxe1eh.gif" alt=""></a></h3>
+        <div class="btn"><a href="https://infinite-basin-55644.herokuapp.com/" rel="noopener noreferrer" target="_blank">Website Link</a></div>
+        <div class="btn"><a href="https://github.com/kyleb12345/YourWines" class="btn-text" rel="noopener noreferrer" target="_blank">Github Code</a></div>
     </span>
     </div>
     </div>
 
     <div class="panel">
         <div class="glass-three">
-            <h2>Meet-Up Blog Site</h2>
+            <h2>React Blog Site</h2>
         </div>
     <div id="third-container">
         <span>
-        <h3>photo here</h3>
-        <p>first section</p>
-        <p>more content</p>
-        <div class="btn"><a href="#">Website Link</a></div>
-        <div class="btn"><a href="#">github code</a></div>
+            <h3><img class="pictures" src="https://res.cloudinary.com/dlgtx9os2/image/upload/v1647298363/other%20sites/space-meetup_x68q1p.gif" alt=""></a></h3>
+        <div class="btn"><a href="https://nextjs-space-meetup.vercel.app" rel="noopener noreferrer" target="_blank">Website Link</a></div>
+        <div class="btn"><a href="https://github.com/kyleb12345/nextjs-space-meetup" rel="noopener noreferrer" target="_blank">Github Code</a></div>
         </span>
         </div>
         </div>
 
+
+
         <div id="game-btn">
-            <a href="">Play a game</a>
+            <a href="https://optimistic-archimedes-a3b5a0.netlify.app/" rel="noopener noreferrer" target="_blank" target="_blank">Play a game</a>
         </div>
 
-        <div id="skills-btn" >
-            <a href="#">My Skills</a>
+        <div id="backdrop"></div>
+        <aside class="modal" id="config-overlay">
+            <div id="skills-box">
+                <div id=""skills-technologies>
+                <h1 id="tech">Technologies</h1>
+                <ul>
+                    <li class="invisible">Hello</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Bootstrap</li>
+                    <li>JavaScript</li>
+                    <li>EJS</li>
+                    <li>React</li>
+                    <li>NextJS</li>
+                    <li>NodeJS</li>
+                    <li>Express</li>
+                    <li>MongoDB</li>
+                    <li>Firebase</li>
+                    <li>MySQL</li>
+                    
+                </ul>
+            </div>
+            <div id="all-projects">
+                <h1>All Project Links</h1>
+                <ul>
+                    <li class="invisible">Hello</li>
+                    <li><a href="https://infinite-basin-55644.herokuapp.com/" rel="noopener noreferrer" target="_blank">YourWines</a></li>
+                    <li><a href="https://kyledevblog.vercel.app/" rel="noopener noreferrer" target="_blank">YourWines</a></li>
+                    <li><a href="https://nextjs-space-meetup.vercel.app/" rel="noopener noreferrer" target="_blank" target="_blank">Space Meetups</a></li>
+                    <li><a href="http://aqueous-shore-08867.herokuapp.com/products" rel="noopener noreferrer" target="_blank">We-Plant</a></li>
+                    <li><a href="https://salty-brushlands-42883.herokuapp.com/" rel="noopener noreferrer" target="_blank" target="_blank">Infinite URL Todo List</a></li>
+                    <li><a href="https://node-sql-heroku-project.herokuapp.com/" rel="noopener noreferrer" target="_blank" target="_blank">MySQL Cult Email Signup</a></li>
+                    <li><a href="https://optimistic-archimedes-a3b5a0.netlify.app/" rel="noopener noreferrer" target="_blank" target="_blank">Tic Tac Toe</a></li>
+                </ul>
+            </div>
+            <div id="all-projects-links">
+                <h1>Stacks & Code</h1>
+                <ul>
+                    <li class="invisible">Hello</li>
+                    <li>EJS MEN | <a href="https://github.com/kyleb12345/YourWines" rel="noopener noreferrer" target="_blank" target="_blank">Github</a></li>
+                    <li>Next.js | <a href="https://github.com/kyleb12345/webdevpublic" rel="noopener noreferrer" target="_blank" target="_blank">Github</a></li>
+                    <li>Next.js| <a href="https://github.com/kyleb12345/nextjs-space-meetup" rel="noopener noreferrer" target="_blank" target="_blank">Github</a></li>
+                    <li>EJS MEN | <a href="https://github.com/kyleb12345/plantsite" rel="noopener noreferrer" target="_blank" target="_blank">Github</a></li>
+                    <li>EJS MEN | <a href="https://github.com/kyleb12345/Todos" rel="noopener noreferrer" target="_blank" target="_blank">Github</a></li>
+                    <li>EJS & MySQL | <a href="https://github.com/kyleb12345/SQL-EJS-EN" rel="noopener noreferrer" target="_blank" target="_blank">Github</a></li>
+                    <li>JavaScript | <a href="https://github.com/kyleb12345/tic-tac-toe" rel="noopener noreferrer" target="_blank" target="_blank">Github</a></li>
+                </ul>
+            </div>
+            </div>
+            <div type="reset" class="btn" id="cancel-config-btn">Close</div>
+        </aside>
+
+        <div id="skills-btn" class="btn">
+            <p>All Projects and Skills</p>
         </div>
 </div>  
 </div>
